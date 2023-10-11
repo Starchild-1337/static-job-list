@@ -1,0 +1,122 @@
+.container {
+  padding-bottom: 2rem;
+}
+
+.vacancy {
+  position: relative;
+  background-color: #fff;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  border-radius: $b-radius-sm;
+  box-shadow: $shadow;
+
+  .company-avatar {
+    width: 50px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(20px, -25px);
+  }
+
+  header {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+
+    .company-name {
+      color: $primary-dark-cyan;
+    }
+
+    .tags {
+      display: flex;
+      gap: 0.35rem;
+      margin-left: 1.15rem;
+
+      .tag-new {
+        background-color: $primary-dark-cyan;
+      }
+
+      .tag-featured {
+        background-color: $neutral-very-darkGrayish;
+      }
+    }
+  }
+
+  .company-position {
+    font-size: 18px;
+    color: $neutral-very-darkGrayish;
+    margin: 1rem 0;
+  }
+
+  .info {
+    span {
+      color: $neutral-darkGrayish;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-right: 1.75rem;
+      }
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background-color: $neutral-very-darkGrayish;
+        border-radius: 50%;
+        top: 50%;
+        right: -16px;
+        transform: translateY(-100%);
+      }
+    }
+  }
+
+  .btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    .vacancy-btn:hover {
+      background-color: $primary-dark-cyan;
+      color: #fff;
+    }
+  }
+}
+
+.featured {
+  border-left: 4px solid $primary-dark-cyan;
+}
+
+@media (width >= 768px) {
+  .container {
+    padding-bottom: 5rem;
+  }
+
+  .vacancy {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+
+    .company {
+      flex-shrink: 0;
+    }
+
+    header {
+      margin-top: 0;
+    }
+
+    .company-avatar {
+      width: initial;
+      position: unset;
+      transform: translate(0, 0);
+    }
+
+    .company-position {
+      margin: 0.5rem 0 0.75rem 0;
+    }
+
+    .btns {
+      margin-left: auto;
+    }
+  }
+}

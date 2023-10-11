@@ -1,0 +1,9 @@
+.head {
+  height: 150px;
+  background: $primary-dark-cyan url("../../assets/bg-header-mobile.svg")
+    no-repeat;
+
+  @media (width > 375px) {
+    background-image: url("../../assets/bg-header-desktop.svg");
+  }
+}
